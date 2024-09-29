@@ -45,7 +45,7 @@ const updateBoard = () => {
 
 const updateMessage = () => {
 	if (winner) {
-		messageEl.textContent = `Congratulations! ${turn} wins!`
+		messageEl.innerHTML = `Congratulations! <span style="color:green; font-weight: bold">${turn} wins!</span>`
 	} else if (tie) {
 		messageEl.textContent = `It's a tie!`
 	} else {
@@ -59,6 +59,10 @@ const init = () => {
 	turn = 'X'
 	winner = false
 	tie = false
+
+	squareEls.forEach((sqr) => {
+		sqr.style.backgroundColor = ''
+	})
 
 	render()
 }
@@ -92,6 +96,10 @@ const checkForWinner = () => {
 		if (board[a] !== '') {
 			if (board[a] === board[b] && board[a] === board[c]) {
 				winner = true
+
+				squareEls[a].style.backgroundColor = 'lightgreen'
+				squareEls[b].style.backgroundColor = 'lightgreen'
+				squareEls[c].style.backgroundColor = 'lightgreen'
 			}
 		}
 	})

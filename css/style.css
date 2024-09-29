@@ -1,0 +1,45 @@
+body {
+	background-color: #fff;
+	/* Use a system font, if none are available use an available sans-sarif */
+	font-family: system-ui, sans-serif;
+	/* margin: 0; */
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	margin: 0 auto;
+}
+
+h1 {
+	position: sticky;
+	top: 0;
+	margin: 0;
+	margin-bottom: 50px;
+	z-index: 20;
+	font-family: monospace;
+	font-size: 32px;
+	text-align: center;
+	color: white;
+	background-color: #63a1ff;
+	padding: 32px;
+	width: 94%;
+	border-bottom-left-radius: 24px;
+	border-bottom-right-radius: 24px;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.board {
+	display: flex;
+	flex-wrap: wrap;
+	width: 50%;
+	gap: 2px;
+}
+
+.sqr {
+	width: 30%;
+	aspect-ratio: 1/1;
+	border: 3px solid black;
+	font-size: 64px;
+	text-align: center;
+	border-radius: 18px;
+}

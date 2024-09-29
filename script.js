@@ -47,7 +47,8 @@ const updateBoard = () => {
 
 const updateMessage = () => {
 	if (winner) {
-		messageEl.innerHTML = `Congratulations! <span style="color:green; font-weight: bold">${turn} wins!</span>`
+		// The message is handled inside checkForWinner, so no need to update it here
+		return
 	} else if (tie) {
 		messageEl.textContent = `It's a tie!`
 	} else {

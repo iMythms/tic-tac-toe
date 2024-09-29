@@ -42,4 +42,23 @@ h1 {
 	font-size: 64px;
 	text-align: center;
 	border-radius: 18px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#reset {
+	margin-top: 50px;
+	padding: 16px;
+	border: none;
+	border-radius: 16px;
+
+	background-color: red;
+	color: white;
+}
+
+#reset:hover {
+	background-color: crimson;
+	color: white;
+	cursor: pointer;
 }

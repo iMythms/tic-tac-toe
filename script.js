@@ -95,6 +95,23 @@ const handleClick = (event) => {
 	render()
 }
 
+/*
+	Executes the computer's move in the game.
+	
+	This function selects a random available square on the board,
+	places an 'O' in that square, and then updates the game state.
+	It includes a delay of 0.5 seconds before making the move.
+	
+	The function performs the following steps:
+	1. Identifies all available squares on the board.
+	2. Randomly selects one of the available squares.
+	3. Places an 'O' in the selected square.
+	4. Renders the updated board.
+	5. Checks for a winner.
+	6. Switches the turn back to 'X' if the game is not won.
+
+	------ Docs by Mytham not ChatGPT :) ------
+*/
 const playComputerMove = () => {
 	let availableSquares = []
 

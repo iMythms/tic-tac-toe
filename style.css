@@ -1,9 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 body {
-	background-color: #fff;
-	/* Use a system font, if none are available use an available sans-sarif */
-	/* margin: 0; */
+	background-color: #f5f5f5;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -33,13 +31,14 @@ h1 {
 	display: flex;
 	flex-wrap: wrap;
 	width: 40%;
-	gap: 2px;
+	gap: 4px;
 }
 
 .sqr {
 	width: 30%;
 	aspect-ratio: 1/1;
-	border: 3px solid black;
+	border: none;
+	background-color: white;
 	font-size: 64px;
 	text-align: center;
 	border-radius: 18px;
@@ -61,5 +60,46 @@ h1 {
 #reset:hover {
 	background-color: crimson;
 	color: white;
+	cursor: pointer;
+}
+
+#gameMode {
+	font-size: larger;
+}
+
+@media screen and (max-width: 600px) {
+	body {
+		padding: 10px;
+		margin: 0 auto;
+	}
+
+	h1 {
+		font-size: 24px;
+		padding: 16px;
+		position: sticky;
+		top: 0;
+		margin: 0;
+		margin-bottom: 50px;
+		z-index: 20;
+	}
+
+	.board {
+		width: 70%;
+		gap: 4px;
+	}
+
+	.sqr {
+		width: 30%;
+		font-size: 48px;
+	}
+
+	#reset {
+		width: 90%;
+		padding: 12px;
+		font-size: 16px;
+	}
+}
+
+label {
 	cursor: pointer;
 }
